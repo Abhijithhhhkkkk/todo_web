@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        .header{
+            display:flex;
+            gap:20%;
+            
+            
+        }
+        .logo{
+            padding-top: 20%;
+           border-radius: 10%;
+           border:1px solid black;
+           
+           color: white;
+           background-color: navy;
+            margin: 0;
+           height: 100vh;
+           width:45%;
+        }
+        h1{
+            text-align: center;
+
+        }
+        .login{
+            padding-top: 4%;
+            border:1px solid  offwhite;
+             width:25%;
+            border-radius: 10%;
+            background-color: beige;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            height: 45vh;
+            margin:10%;
+
+        }
+       h2{
+        font-weight: bold;
+        font-size:2rem;
+        text-align: center;
+        color:black;
+       }
+        .pass_user{
+          display:flex;
+          flex-direction: column;
+          gap:20px;
+          align-items: center;
+         
+
+        }
+        input{
+            padding: 10px;
+            width: 60%;
+            border-radius: 8%;
+            border:1px solid beige;
+        }
+        button{
+            
+            padding: 10px;
+            width: 30%;
+            border-radius: 5px;
+            border:1px solid beige;
+            background-color: navy;
+            color:white;
+            font-weight: bold;
+            align-self: center;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+            
+            <h1>Welcome to the Login Page</h1>
+        </div>
+        <div class="login">
+            <h2>Login</h2>
+            <div class="pass_user">
+                <input type="text" id="username" placeholder="Enter your username">
+        
+                 <input type="password" id="password" placeholder="Enter your password">
+
+            </div>
+            <button id="loginBtn" onclick="login()">Login</button>
+          
+         </div>
+    </div>
+    <script>
+        function login(){
+            const username=document.getElementById('username').value;
+            const password=document.getElementById('password').value;
+            const actual_username='Arkac';
+            const actual_password='betterlucknexttime';
+            if(username==actual_username && password==actual_password){
+                window.location.href="./home.html";
+
+            }
+            else{
+                alert('Invalid username or password. Please try again.');
+            }
+
+        }
+    </script>
+</body>
+</html>
